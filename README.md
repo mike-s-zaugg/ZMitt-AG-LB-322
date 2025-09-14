@@ -18,24 +18,8 @@ Es ist nicht vorgesehen, dass dieses Repository für zukünftige Abgaben des Mod
 
 ## Lizenz
 
-MIT License
-
 Copyright (c) 2025 Mike Sandor Zaugg, Alwin Erasmus Litscher, Noé Lorin Bachofner
 
-Permission is hereby granted, free of charge, to any person obtaining a copy  
-of this software and associated documentation files (the "Software"), to deal  
-in the Software without restriction, including without limitation the rights  
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell  
-copies of the Software, and to permit persons to whom the Software is  
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all  
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR  
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,  
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE  
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER  
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,  
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE  
-SOFTWARE.
+Alle Rechte vorbehalten. Dieses Repository dient **ausschließlich als Live-Demo** und zur Bereitstellung des Quellcodes.  
+Es ist **nicht gestattet**, dieses Projekt oder Teile davon für zukünftige Abgaben des Modul 322 oder anderer Kurse zu verwenden, zu kopieren oder weiterzugeben.  
+Jegliche Nutzung außerhalb der Demonstration bedarf der **schriftlichen Genehmigung der Autoren**.
