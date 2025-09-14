@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZMitti AG - Standort Berufsschule</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/02b53bbf48.js" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+      <div class="header-container">
+        <div class="row">
+          <div class="col-6">
+            <div class="logo">
+              <a href="index.html" class="logo-link">
+                ZMitt Ag
+              </a>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="container" id="icons-desktop">
+              <ul class="nav-list">
+                <li class="nav-list-item"><div class="nav-item"><a href="berufsschule.html" class="nav-item-link nav-active">Berufsschule</a></div></li>
+                <li class="nav-list-item"><div class="nav-item"><a href="bahnhof.html" class="nav-item-link">Bahnhof</a></div></li>
+                <li class="nav-list-item"><div class="nav-item"><a href="cart.html"><i class="fa-solid fa-cart-shopping fa-xl"></i></a></div></li>
+              </ul>
+            </div>
+            <div class="container" id="icons-mobile">
+              <i class="fa-solid fa-bars fa-2xl" id="hamburger-btn"></i>
+              <ul class="nav-list mobile-nav d-none" id="mobile-menu">
+                <li class="nav-list-item"><div class="nav-item"><a href="berufsschule.html" class="nav-item-link nav-active">Berufsschule</a></div></li>
+                <li class="nav-list-item"><div class="nav-item"><a href="bahnhof.html" class="nav-item-link">Bahnhof</a></div></li>
+                <li class="nav-list-item"><div class="nav-item"><a href="cart.html"><i class="fa-solid fa-cart-shopping fa-xl"></i></a></div></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="centered-container">
+        <div class="spacer-8"></div>
+          <h1>Berufsschule Baden</h1>
+          <h4> (BBBaden und Umgebung)</h4>
+
+            <div class="menu-container">
+              <div class="row g-3">
+                <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                    <div class="menu-image-wrapper">
+                        <img class="menu-image" src="assets/menu/berufsschule/chicken-tikka-masala.jpg" alt="Chicken Tikka Masala"/>
+                    </div>
+                    <h5 class="menu-title">Chicken Tikka Masala</h5>
+                    <p>Indian Palace</p>
+                    <div class="menu-item-label">CHF 16.50</div>
+                    <ul class="menu-icons-list">
+                        <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                        <li class="menu-icons-list-item"><button type="button" 
+                                                                class="btn-info" 
+                                                                data-bs-container="body" 
+                                                                data-bs-toggle="popover" 
+                                                                data-bs-placement="right" 
+                                                                data-bs-custom-class="popover"
+                                                                data-bs-content="Hühnchenfleisch, Tomaten, Sahne,&#10;Zwiebeln, Ingwer, Knoblauch,&#10;Garam Masala, Kurkuma ">
+                                                        <i class="fa-solid fa-info "></i>
+                                                        </button>
+                        </li>
+                    </ul>       
+                </div>
+              <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                    <div class="menu-image-wrapper">
+                        <img class="menu-image" src="assets/menu/berufsschule/dal-curry.jpg" alt="Vegetarisches Dal Curry"/>
+                    </div>
+                    <h5 class="menu-title">Vegetarisches Dal Curry </h5>
+                    <p>Indian Palace</p>
+                    <div class="menu-item-label">CHF 12.90</div>
+                    <ul class="menu-icons-list">
+                        <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                        <li class="menu-icons-list-item"><button type="button" 
+                                                                class="btn-info" 
+                                                                data-bs-container="body" 
+                                                                data-bs-toggle="popover" 
+                                                                data-bs-placement="right" 
+                                                                data-bs-custom-class="popover"
+                                                                data-bs-content="Rote Linsen, Zwiebeln, Tomaten,&#10;Kurkuma, Kreuzkümmel, Koriander,&#10;Chili, Kokosöl ">
+                                                        <i class="fa-solid fa-info "></i>
+                                                        </button>
+                        </li>
+                    </ul>       
+                </div>
+                <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                    <div class="menu-image-wrapper">
+                        <img class="menu-image" src="assets/menu/berufsschule/lamb-biryani.jpg" alt="Lamb Biryani"/>
+                    </div>
+                    <h5 class="menu-title">Lamb Biryani</h5>
+                    <p>Indian Palace</p>
+                    <div class="menu-item-label">CHF 19.80</div>
+                    <ul class="menu-icons-list">
+                        <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                        <li class="menu-icons-list-item"><button type="button" 
+                                                                class="btn-info" 
+                                                                data-bs-container="body" 
+                                                                data-bs-toggle="popover" 
+                                                                data-bs-placement="right" 
+                                                                data-bs-custom-class="popover"
+                                                                data-bs-content="Lammfleisch, Basmatireis, Safran, Zwiebeln, Kardamom, Zimt,&#10;  Rosinen, Mandeln">
+                                                        <i class="fa-solid fa-info "></i>
+                                                        </button>
+                        </li>
+                    </ul>       
+                </div>
+                <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                    <div class="menu-image-wrapper">
+                        <img class="menu-image" src="assets/menu/berufsschule/doner-kebab-classic.jpg" alt="Döner Kebab Classic"/>
+                    </div>
+                    <h5 class="menu-title">Döner Kebab Classic</h5>
+                    <p>Royal Döner</p>
+                    <div class="menu-item-label">CHF 9.50</div>
+                    <ul class="menu-icons-list">
+                        <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                        <li class="menu-icons-list-item"><button type="button" 
+                                                                class="btn-info" 
+                                                                data-bs-container="body" 
+                                                                data-bs-toggle="popover" 
+                                                                data-bs-placement="right" 
+                                                                data-bs-custom-class="popover"
+                                                                data-bs-content="Kalbfleisch, Fladenbrot, Eisbergsalat, Tomaten, Zwiebeln, Gurken, Joghurt-Sauce ">
+                                                        <i class="fa-solid fa-info "></i>
+                                                        </button>
+                        </li>
+                    </ul>       
+                </div>
+                <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                    <div class="menu-image-wrapper">
+                        <img class="menu-image" src="assets/menu/berufsschule/falafel-wrap-veggie.jpg" alt="Falafel Wrap Veggie"/>
+                    </div>
+                    <h5 class="menu-title">Falafel Wrap Veggie</h5>
+                    <p>Royal Döner</p>
+                    <div class="menu-item-label">CHF 16.50</div>
+                    <ul class="menu-icons-list">
+                        <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                        <li class="menu-icons-list-item"><button type="button" 
+                                                                class="btn-info" 
+                                                                data-bs-container="body" 
+                                                                data-bs-toggle="popover" 
+                                                                data-bs-placement="right" 
+                                                                data-bs-custom-class="popover"
+                                                                data-bs-content="Kichererbsen, Tortilla, Hummus, Rucola, Tomaten, Gurken, Paprika, Tahini-Sauce">
+                                                        <i class="fa-solid fa-info "></i>
+                                                        </button>
+                        </li>
+                    </ul>       
+                </div>
+                <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                    <div class="menu-image-wrapper">
+                        <img class="menu-image" src="assets/menu/berufsschule/adana-kebab-teller.jpg" alt="Adana Kebab Teller"/>
+                    </div>
+                    <h5 class="menu-title">Adana Kebab Teller</h5>
+                    <p>Royal Döner</p>
+                    <div class="menu-item-label">CHF 15.50</div>
+                    <ul class="menu-icons-list">
+                        <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                        <li class="menu-icons-list-item"><button type="button" 
+                                                                class="btn-info" 
+                                                                data-bs-container="body" 
+                                                                data-bs-toggle="popover" 
+                                                                data-bs-placement="right" 
+                                                                data-bs-custom-class="popover"
+                                                                data-bs-content="Rinderhackfleisch, Reis, Paprika, Zwiebeln, Petersilie, Chili, Sumach, Bulgur ">
+                                                        <i class="fa-solid fa-info "></i>
+                                                        </button>
+                        </li>
+                    </ul>       
+                </div>
+                <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                    <div class="menu-image-wrapper">
+                        <img class="menu-image" src="assets/menu/berufsschule/pizza-margherita.jpg" alt="Pizza Margherita"/>
+                    </div>
+                    <h5 class="menu-title">Pizza Margherita</h5>
+                    <p>Mio Pizza</p>
+                    <div class="menu-item-label">CHF 13.50</div>
+                    <ul class="menu-icons-list">
+                        <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                        <li class="menu-icons-list-item"><button type="button" 
+                                                                class="btn-info" 
+                                                                data-bs-container="body" 
+                                                                data-bs-toggle="popover" 
+                                                                data-bs-placement="right" 
+                                                                data-bs-custom-class="popover"
+                                                                data-bs-content="Pizzateig, Tomatensauce, Mozzarella, Basilikum, Olivenöl, Oregano ">
+                                                        <i class="fa-solid fa-info "></i>
+                                                        </button>
+                        </li>
+                    </ul>       
+                </div>
+                <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                    <div class="menu-image-wrapper">
+                        <img class="menu-image" src="assets/menu/berufsschule/pizza-quattro-stagioni.jpg" alt="Pizza Quattro Stagioni"/>
+                    </div>
+                    <h5 class="menu-title">Pizza Quattro Stagioni</h5>
+                    <p>Mio Pizza</p>
+                    <div class="menu-item-label">CHF 17.90</div>
+                    <ul class="menu-icons-list">
+                        <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                        <li class="menu-icons-list-item"><button type="button" 
+                                                                class="btn-info" 
+                                                                data-bs-container="body" 
+                                                                data-bs-toggle="popover" 
+                                                                data-bs-placement="right" 
+                                                                data-bs-custom-class="popover"
+                                                                data-bs-content=" Pizzateig, Tomatensauce, Mozzarella, Schinken, Champignons, Artischocken, Oliven, Paprika ">
+                                                        <i class="fa-solid fa-info "></i>
+                                                        </button>
+                        </li>
+                    </ul>       
+                </div>
+                <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                    <div class="menu-image-wrapper">
+                        <img class="menu-image" src="assets/menu/berufsschule/spaghetti-carbonara.jpg" alt="Spaghetti Carbonara"/>
+                    </div>
+                    <h5 class="menu-title">Spaghetti Carbonara</h5>
+                    <p>Mio Pizza</p>
+                    <div class="menu-item-label">CHF 14.80</div>
+                    <ul class="menu-icons-list">
+                        <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                        <li class="menu-icons-list-item"><button type="button" 
+                                                                class="btn-info" 
+                                                                data-bs-container="body" 
+                                                                data-bs-toggle="popover" 
+                                                                data-bs-placement="right" 
+                                                                data-bs-custom-class="popover"
+                                                                data-bs-content="Spaghetti, Speck, Eier, Parmesan, Sahne, schwarzer Pfeffer, Petersilie ">
+                                                        <i class="fa-solid fa-info "></i>
+                                                        </button>
+                        </li>
+                    </ul>       
+                </div>
+                <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                    <div class="menu-image-wrapper">
+                        <img class="menu-image" src="assets/menu/berufsschule/rösti.jpg" alt="Schweizer Rösti mit Bratwurst"/>
+                    </div>
+                    <h5 class="menu-title">Schweizer Rösti mit Bratwurst</h5>
+                    <p>Restaurant Rösli</p>
+                    <div class="menu-item-label">CHF 18.50</div>
+                    <ul class="menu-icons-list">
+                        <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                        <li class="menu-icons-list-item"><button type="button" 
+                                                                class="btn-info" 
+                                                                data-bs-container="body" 
+                                                                data-bs-toggle="popover" 
+                                                                data-bs-placement="right" 
+                                                                data-bs-custom-class="popover"
+                                                                data-bs-content="Kartoffeln, Bratwurst, Butter, Zwiebeln, Speck, Salz, Pfeffer, Schnittlauch ">
+                                                        <i class="fa-solid fa-info "></i>
+                                                        </button>
+                        </li>
+                    </ul>       
+                </div>
+                <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                    <div class="menu-image-wrapper">
+                        <img class="menu-image" src="assets/menu/berufsschule/zürich-geschnetzeltes.jpg" alt="Zürcher Geschnetzeltes"/>
+                    </div>
+                    <h5 class="menu-title">Zürcher Geschnetzeltes</h5>
+                    <p>Restaurant Rösli</p>
+                    <div class="menu-item-label">CHF 22.90</div>
+                    <ul class="menu-icons-list">
+                        <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                        <li class="menu-icons-list-item"><button type="button" 
+                                                                class="btn-info" 
+                                                                data-bs-container="body" 
+                                                                data-bs-toggle="popover" 
+                                                                data-bs-placement="right" 
+                                                                data-bs-custom-class="popover"
+                                                                data-bs-content="Kalbfleisch, Champignons, Sahne, Weißwein, Zwiebeln, Butter, Petersilie, Rösti ">
+                                                        <i class="fa-solid fa-info "></i>
+                                                        </button>
+                        </li>
+                    </ul>       
+                </div>
+                <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                  <div class="menu-image-wrapper">
+                      <img class="menu-image" src="assets/menu/berufsschule/aelplermagronen.jpg" alt="Älplermagronen"/>
+                  </div>
+                  <h5 class="menu-title">Älplermagronen</h5>
+                  <p>Restaurant Rösli</p>
+                  <div class="menu-item-label">CHF 16.50</div>
+                  <ul class="menu-icons-list">
+                      <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                      <li class="menu-icons-list-item"><button type="button" 
+                                                              class="btn-info" 
+                                                              data-bs-container="body" 
+                                                              data-bs-toggle="popover" 
+                                                              data-bs-placement="right" 
+                                                              data-bs-custom-class="popover"
+                                                              data-bs-content="Makkaroni, Gruyère, Appenzeller, Zwiebeln, Apfelmus, Butter, Speck ">
+                                                      <i class="fa-solid fa-info "></i>
+                                                      </button>
+                      </li>
+                  </ul>       
+              </div>
+            </div>
+          </div>
+        
+
+        <h2 class="map-title">Standort</h2>
+        <h5>Schmiedepl. 5400 Baden</h5>
+
+         <div id="map-bbbaden"></div>
+      
+      </div>
+       <footer>
+        <div class="centered-container">
+          <div class="row">
+            <div class="col-xl-6 col-md-12 footer-col">
+              <h5>Gruppenarbeit mit:</h5>
+              <ul>
+                <li>Alwin Eramsus Litscher</li>
+                <li>Noé Lorin Bachofner </li>
+                <li>Mike Sandor Zaugg</li>
+              </ul>
+            </div>
+            <div class="col-xl-6 col-md-12 footer-col text-md-start text-xl-end">
+              <h5>Vectoren von <a href="https://www.vecteezy.com/free-vector" target="_blank">Vecteezy</a></h5>
+              <h5>Bilder von <a href="https://www.freepik.com/" target="_blank">Freepik</a></h5>
+              <h5>QR-Code von <a href="https://app.qr-code-generator.com/" target="_blank">QR-Code Generator</a></h5>
+              <h5>Karte von <a href="https://leafletjs.com/" target="_blank">Leaflet/OpenStreetMap</a></h5>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZMitti AG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://kit.fontawesome.com/02b53bbf48.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+      <div class="header-container">
+        <div class="row">
+          <div class="col-6">
+            <div class="logo">
+              <a href="index.html" class="logo-link">
+                ZMitt Ag
+              </a>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="container" id="icons-desktop">
+              <ul class="nav-list">
+                <li class="nav-list-item"><div class="nav-item"><a href="berufsschule.html" class="nav-item-link">Berufsschule</a></div></li>
+                <li class="nav-list-item"><div class="nav-item"><a href="bahnhof.html" class="nav-item-link">Bahnhof</a></div></li>
+                <li class="nav-list-item"><div class="nav-item"><a href="cart.html"><i class="fa-solid fa-cart-shopping fa-xl"></i></a></div></li>
+              </ul>
+            </div>
+            <div class="container" id="icons-mobile">
+              <i class="fa-solid fa-bars fa-2xl" id="hamburger-btn"></i>
+              <ul class="nav-list mobile-nav d-none" id="mobile-menu">
+                <li class="nav-list-item"><div class="nav-item"><a href="berufsschule.html" class="nav-item-link">Berufsschule</a></div></li>
+                <li class="nav-list-item"><div class="nav-item"><a href="bahnhof.html" class="nav-item-link">Bahnhof</a></div></li>
+                <li class="nav-list-item"><div class="nav-item"><a href="cart.html"><i class="fa-solid fa-cart-shopping fa-xl"></i></a></div></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="centered-container">
+        <div class="spacer-8"></div>
+         
+        <h2 class="confirmation-title">Bestellung Erfolgreich!</h2>
+        <h5 class="mb-5">Deine Bestellung wurde aufgegeben. <br>
+            <b><div class="mt-3" id="pickup-time"></div></b>
+        </h5>
+        <h5>Gebe diesen Code beim Automaten ein, damit du dein Essen abholen kannst.</h5>
+
+        <div class="pickup-code-container">
+            <h4>Abholcode: <div class="d-inline pickup-code-code">3KT8-CW08</div></h4>
+        </div>
+
+
+      
+        </div>
+         <footer>
+        <div class="centered-container">
+          <div class="row">
+            <div class="col-xl-6 col-md-12 footer-col">
+              <h5>Gruppenarbeit mit:</h5>
+              <ul>
+                <li>Alwin Eramsus Litscher</li>
+                <li>Noé Lorin Bachofner </li>
+                <li>Mike Sandor Zaugg</li>
+              </ul>
+            </div>
+            <div class="col-xl-6 col-md-12 footer-col text-md-start text-xl-end">
+              <h5>Vectoren von <a href="https://www.vecteezy.com/free-vector" target="_blank">Vecteezy</a></h5>
+              <h5>Bilder von <a href="https://www.freepik.com/" target="_blank">Freepik</a></h5>
+              <h5>QR-Code von <a href="https://app.qr-code-generator.com/" target="_blank">QR-Code Generator</a></h5>
+              <h5>Karte von <a href="https://leafletjs.com/" target="_blank">Leaflet/OpenStreetMap</a></h5>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+
+<script src="js/script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const now = new Date();
+    const nextHour = new Date();
+    nextHour.setHours(now.getHours() + 1, 0, 0, 0);
+
+    const minutenzurNächstenStunde = (nextHour - now) / 60000;
+
+    let pickupHour;
+    if (minutenzurNächstenStunde >= 30) {
+        pickupHour = nextHour.getHours();
+    } else {
+        pickupHour = nextHour.getHours() + 1;
+    }
+
+    if (pickupHour >= 24) pickupHour -= 24;
+
+    const formatted = pickupHour.toString().padStart(2, "0") + ":00";
+
+    document.getElementById("pickup-time").textContent =
+        "Abholung möglich um " + formatted;
+});
+</script>
+</body>
+</html>

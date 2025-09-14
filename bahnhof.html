@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZMitti AG - Standort Bahnhof</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/02b53bbf48.js" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+      <div class="header-container">
+        <div class="row">
+          <div class="col-6">
+            <div class="logo">
+              <a href="index.html" class="logo-link">
+                ZMitt Ag
+              </a>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="container" id="icons-desktop">
+              <ul class="nav-list">
+                <li class="nav-list-item"><div class="nav-item"><a href="berufsschule.html" class="nav-item-link">Berufsschule</a></div></li>
+                <li class="nav-list-item"><div class="nav-item"><a href="bahnhof.html" class="nav-item-link nav-active">Bahnhof</a></div></li>
+                <li class="nav-list-item"><div class="nav-item"><a href="cart.html"><i class="fa-solid fa-cart-shopping fa-xl"></i></a></div></li>
+              </ul>
+            </div>
+            <div class="container" id="icons-mobile">
+              <i class="fa-solid fa-bars fa-2xl" id="hamburger-btn"></i>
+              <ul class="nav-list mobile-nav d-none" id="mobile-menu">
+                <li class="nav-list-item"><div class="nav-item"><a href="berufsschule.html" class="nav-item-link">Berufsschule</a></div></li>
+                <li class="nav-list-item"><div class="nav-item"><a href="bahnhof.html" class="nav-item-link nav-active">Bahnhof</a></div></li>
+                <li class="nav-list-item"><div class="nav-item"><a href="cart.html"><i class="fa-solid fa-cart-shopping fa-xl"></i></a></div></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="centered-container">
+      <div class="spacer-8"></div>
+        <h1>Bahnhof Baden</h1>
+
+        <div class="menu-container">
+          <div class="row g-3">
+            <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                <div class="menu-image-wrapper">
+                    <img class="menu-image" src="assets/menu/bahnhof/Express_Sandwich_Club.jpg" alt="Express Sandwich Club"/>
+                </div>
+                <h5 class="menu-title">Express Sandwich Club</h5>
+                <p>GleisGourmet</p>
+                <div class="menu-item-label">CHF 11.90</div>
+                <ul class="menu-icons-list">
+                    <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                    <li class="menu-icons-list-item"><button type="button" 
+                                                            class="btn-info" 
+                                                            data-bs-container="body" 
+                                                            data-bs-toggle="popover" 
+                                                            data-bs-placement="right" 
+                                                            data-bs-custom-class="popover"
+                                                            data-bs-content="Toastbrot, Hähnchenbrust, Avocado, Bacon, Tomaten, Salat, Mayonnaise, Senf">
+                                                    <i class="fa-solid fa-info "></i>
+                                                    </button>
+                    </li>
+                </ul>       
+            </div>
+            <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                <div class="menu-image-wrapper">
+                    <img class="menu-image" src="assets/menu/bahnhof/Bagel_Lachs_Deluxe.jpg" alt="Bagel Lachs Deluxe"/>
+                </div>
+                <h5 class="menu-title">Bagel Lachs Deluxe</h5>
+                <p>GleisGourmet</p>
+                <div class="menu-item-label">CHF 14.50</div>
+                <ul class="menu-icons-list">
+                    <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                    <li class="menu-icons-list-item"><button type="button" 
+                                                            class="btn-info" 
+                                                            data-bs-container="body" 
+                                                            data-bs-toggle="popover" 
+                                                            data-bs-placement="right" 
+                                                            data-bs-custom-class="popover"
+                                                            data-bs-content="Bagel, Räucherlachs, Frischkäse, Kapern, rote Zwiebeln, Dill, Gurken ">
+                                                    <i class="fa-solid fa-info "></i>
+                                                    </button>
+                    </li>
+                </ul>       
+            </div>
+            <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                <div class="menu-image-wrapper">
+                    <img class="menu-image" src="assets/menu/bahnhof/Power_Bowl_Oriental.jpg" alt="Power Bowl Oriental"/>
+                </div>
+                <h5 class="menu-title">Power Bowl Oriental</h5>
+                <p>GleisGourmet</p>
+                <div class="menu-item-label">CHF 13.80</div>
+                <ul class="menu-icons-list">
+                    <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                    <li class="menu-icons-list-item"><button type="button" 
+                                                            class="btn-info" 
+                                                            data-bs-container="body" 
+                                                            data-bs-toggle="popover" 
+                                                            data-bs-placement="right" 
+                                                            data-bs-custom-class="popover"
+                                                            data-bs-content="Quinoa, Kichererbsen, Rucola, Feta, Tomaten, Gurken, Oliven, Tahini-Dressing">
+                                                    <i class="fa-solid fa-info "></i>
+                                                    </button>
+                    </li>
+                </ul>       
+            </div>
+            <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                <div class="menu-image-wrapper">
+                    <img class="menu-image" src="assets/menu/bahnhof/Thai_Green_Curry.jpg" alt="Thai Green Curry"/>
+                </div>
+                <h5 class="menu-title">Thai Green Curry</h5>
+                <p>Kupplung & Curry </p>
+                <div class="menu-item-label">CHF 15.90</div>
+                <ul class="menu-icons-list">
+                    <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                    <li class="menu-icons-list-item"><button type="button" 
+                                                            class="btn-info" 
+                                                            data-bs-container="body" 
+                                                            data-bs-toggle="popover" 
+                                                            data-bs-placement="right" 
+                                                            data-bs-custom-class="popover"
+                                                            data-bs-content="Hühnchenfleisch, Kokosmilch, Thai-Basilikum, Auberginen, grüne Chili, Ingwer, Jasminreis ">
+                                                    <i class="fa-solid fa-info "></i>
+                                                    </button>
+                    </li>
+                </ul>       
+            </div>
+            <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                <div class="menu-image-wrapper">
+                    <img class="menu-image" src="assets/menu/bahnhof/Pad_Thai_Express.jpg" alt="Pad Thai Express"/>
+                </div>
+                <h5 class="menu-title">Pad Thai Express</h5>
+                <p>Kupplung & Curry </p>
+                <div class="menu-item-label">CHF 13.50</div>
+                <ul class="menu-icons-list">
+                    <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                    <li class="menu-icons-list-item"><button type="button" 
+                                                            class="btn-info" 
+                                                            data-bs-container="body" 
+                                                            data-bs-toggle="popover" 
+                                                            data-bs-placement="right" 
+                                                            data-bs-custom-class="popover"
+                                                            data-bs-content="Reisnudeln, Garnelen, Eier, Sojabohnensprossen, Erdnüsse, Tamarinde, Fischsauce, Limette ">
+                                                    <i class="fa-solid fa-info "></i>
+                                                    </button>
+                    </li>
+                </ul>       
+            </div>
+            <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                <div class="menu-image-wrapper">
+                    <img class="menu-image" src="assets/menu/bahnhof/Vietnamese_Pho.jpg" alt="Vietnamese Pho"/>
+                </div>
+                <h5 class="menu-title">Vietnamese Pho</h5>
+                <p>Kupplung & Curry </p>
+                <div class="menu-item-label">CHF 12.90</div>
+                <ul class="menu-icons-list">
+                    <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                    <li class="menu-icons-list-item"><button type="button" 
+                                                            class="btn-info" 
+                                                            data-bs-container="body" 
+                                                            data-bs-toggle="popover" 
+                                                            data-bs-placement="right" 
+                                                            data-bs-custom-class="popover"
+                                                            data-bs-content="Reisnudeln, Rinderbrühe, Rindfleisch, Zwiebeln, Koriander, Thai-Basilikum, Limette, Chili">
+                                                    <i class="fa-solid fa-info "></i>
+                                                    </button>
+                    </li>
+                </ul>       
+            </div>
+            <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                <div class="menu-image-wrapper">
+                    <img class="menu-image" src="assets/menu/bahnhof/Risotto_ai_Porcini.jpg" alt="Risotto ai Porcini"/>
+                </div>
+                <h5 class="menu-title">Risotto ai Porcini</h5>
+                <p>Ristorante Binario</p>
+                <div class="menu-item-label">CHF 17.50</div>
+                <ul class="menu-icons-list">
+                    <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                    <li class="menu-icons-list-item"><button type="button" 
+                                                            class="btn-info" 
+                                                            data-bs-container="body" 
+                                                            data-bs-toggle="popover" 
+                                                            data-bs-placement="right" 
+                                                            data-bs-custom-class="popover"
+                                                            data-bs-content="Arborio-Reis, Steinpilze, Parmesan, Weißwein, Schalotten, Butter, Petersilie">
+                                                    <i class="fa-solid fa-info "></i>
+                                                    </button>
+                    </li>
+                </ul>       
+            </div>
+            <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                <div class="menu-image-wrapper">
+                    <img class="menu-image" src="assets/menu/bahnhof/Penne_all_Arrabbiata.jpg" alt="Penne all'Arrabbiata"/>
+                </div>
+                <h5 class="menu-title">Penne all'Arrabbiata</h5>
+                <p>Ristorante Binario</p>
+                <div class="menu-item-label">CHF 12.90</div>
+                <ul class="menu-icons-list">
+                    <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                    <li class="menu-icons-list-item"><button type="button" 
+                                                            class="btn-info" 
+                                                            data-bs-container="body" 
+                                                            data-bs-toggle="popover" 
+                                                            data-bs-placement="right" 
+                                                            data-bs-custom-class="popover"
+                                                            data-bs-content="Penne, Tomaten, Knoblauch, Chili, Olivenöl, Petersilie, Parmesan">
+                                                    <i class="fa-solid fa-info "></i>
+                                                    </button>
+                    </li>
+                </ul>       
+            </div>
+            <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                <div class="menu-image-wrapper">
+                    <img class="menu-image" src="assets/menu/bahnhof/Osso_Buco_Milanese.jpg" alt="Osso Buco Milanese"/>
+                </div>
+                <h5 class="menu-title">Osso Buco Milanese</h5>
+                <p>Ristorante Binario</p>
+                <div class="menu-item-label">CHF 24.50</div>
+                <ul class="menu-icons-list">
+                    <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                    <li class="menu-icons-list-item"><button type="button" 
+                                                            class="btn-info" 
+                                                            data-bs-container="body" 
+                                                            data-bs-toggle="popover" 
+                                                            data-bs-placement="right" 
+                                                            data-bs-custom-class="popover"
+                                                            data-bs-content="Kalbshaxe, Arborio-Reis, Safran, Tomaten, Karotten, Sellerie, Weißwein, Gremolata ">
+                                                    <i class="fa-solid fa-info "></i>
+                                                    </button>
+                    </li>
+                </ul>       
+            </div>
+            <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                <div class="menu-image-wrapper">
+                    <img class="menu-image" src="assets/menu/bahnhof/Sushi_Mix_Classic.jpg" alt="Sushi Mix Classic"/>
+                </div>
+                <h5 class="menu-title">Sushi Mix Classic</h5>
+                <p>Sushi Express 24</p>
+                <div class="menu-item-label">CHF 16.90</div>
+                <ul class="menu-icons-list">
+                    <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                    <li class="menu-icons-list-item"><button type="button" 
+                                                            class="btn-info" 
+                                                            data-bs-container="body" 
+                                                            data-bs-toggle="popover" 
+                                                            data-bs-placement="right" 
+                                                            data-bs-custom-class="popover"
+                                                            data-bs-content="Sushi-Reis, Lachs, Thunfisch, Nori, Wasabi, eingelegter Ingwer, Sojasauce">
+                                                    <i class="fa-solid fa-info "></i>
+                                                    </button>
+                    </li>
+                </ul>       
+            </div>
+            <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                <div class="menu-image-wrapper">
+                    <img class="menu-image" src="assets/menu/bahnhof/Chicken Teriyaki Bowl.jpg" alt="Chicken Teriyaki Bowl"/>
+                </div>
+                <h5 class="menu-title">Chicken Teriyaki Bowl</h5>
+                <p>Sushi Express 24</p>
+                <div class="menu-item-label">CHF 13.50</div>
+                <ul class="menu-icons-list">
+                    <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                    <li class="menu-icons-list-item"><button type="button" 
+                                                            class="btn-info" 
+                                                            data-bs-container="body" 
+                                                            data-bs-toggle="popover" 
+                                                            data-bs-placement="right" 
+                                                            data-bs-custom-class="popover"
+                                                            data-bs-content="Hähnchenfleisch, Sushi-Reis, Teriyaki-Sauce, Edamame, Karotten, Gurken, Sesam ">
+                                                    <i class="fa-solid fa-info "></i>
+                                                    </button>
+                    </li>
+                </ul>       
+            </div>
+            <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                <div class="menu-image-wrapper">
+                    <img class="menu-image" src="assets/menu/bahnhof/Vegetarien Maki Set.jpg" alt="Vegetarian Maki Set"/>
+                </div>
+                <h5 class="menu-title">Vegetarian Maki Set</h5>
+                <p>Sushi Express 24</p>
+                <div class="menu-item-label">CHF 11.90</div>
+                <ul class="menu-icons-list">
+                    <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                    <li class="menu-icons-list-item"><button type="button" 
+                                                            class="btn-info" 
+                                                            data-bs-container="body" 
+                                                            data-bs-toggle="popover" 
+                                                            data-bs-placement="right" 
+                                                            data-bs-custom-class="popover"
+                                                            data-bs-content="Sushi-Reis, Avocado, Gurke, Karotten, Nori, Sesam, Sojasauce, Wasabi ">
+                                                    <i class="fa-solid fa-info "></i>
+                                                    </button>
+                    </li>
+                </ul>       
+            </div>
+            <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                <div class="menu-image-wrapper">
+                    <img class="menu-image" src="assets/menu/bahnhof/Croissant Parisien.jpg" alt="Croissant Parisien"/>
+                </div>
+                <h5 class="menu-title">Croissant Parisien</h5>
+                <p>Café Abfahrt</p>
+                <div class="menu-item-label">CHF 7.50</div>
+                <ul class="menu-icons-list">
+                    <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                    <li class="menu-icons-list-item"><button type="button" 
+                                                            class="btn-info" 
+                                                            data-bs-container="body" 
+                                                            data-bs-toggle="popover" 
+                                                            data-bs-placement="right" 
+                                                            data-bs-custom-class="popover"
+                                                            data-bs-content="Croissant, Schinken, Gruyère, Butter, Senf, Salat">
+                                                    <i class="fa-solid fa-info "></i>
+                                                    </button>
+                    </li>
+                </ul>       
+            </div>
+            <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                <div class="menu-image-wrapper">
+                    <img class="menu-image" src="assets/menu/bahnhof/Quiche Lorraine.jpg" alt="Quiche Lorraine"/>
+                </div>
+                <h5 class="menu-title">Quiche Lorraine</h5>
+                <p>Café Abfahrt</p>
+                <div class="menu-item-label">CHF 9.90</div>
+                <ul class="menu-icons-list">
+                    <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                    <li class="menu-icons-list-item"><button type="button" 
+                                                            class="btn-info" 
+                                                            data-bs-container="body" 
+                                                            data-bs-toggle="popover" 
+                                                            data-bs-placement="right" 
+                                                            data-bs-custom-class="popover"
+                                                            data-bs-content="Mürbeteig, Eier, Sahne, Speck, Zwiebeln, Gruyère, Muskatnuss ">
+                                                    <i class="fa-solid fa-info "></i>
+                                                    </button>
+                    </li>
+                </ul>       
+            </div>
+            <div class="col-sm-12 col-xl-4 col-md-6 menu-item">
+                <div class="menu-image-wrapper">
+                    <img class="menu-image" src="assets/menu/bahnhof/caesar-wrap.jpg" alt="Caesar Salad Wrap"/>
+                </div>
+                <h5 class="menu-title">Caesar Salad Wrap</h5>
+                <p>Café Abfahrt</p>
+                <div class="menu-item-label">CHF 8.50</div>
+                <ul class="menu-icons-list">
+                    <li class="menu-icons-list-item"><i class="fa-solid fa-cart-plus fa-xl"></i></li>
+                    <li class="menu-icons-list-item"><button type="button" 
+                                                            class="btn-info" 
+                                                            data-bs-container="body" 
+                                                            data-bs-toggle="popover" 
+                                                            data-bs-placement="right" 
+                                                            data-bs-custom-class="popover"
+                                                            data-bs-content="Tortilla, Römersalat, Hähnchenbrust, Parmesan, Croutons, Caesar-Dressing, Sardellen ">
+                                                    <i class="fa-solid fa-info "></i>
+                                                    </button>
+                    </li>
+                </ul>       
+            </div>
+          </div>
+        </div>
+
+        <h2 class="map-title">Standort</h2>
+
+         <div id="map"></div>
+      
+      </div>
+       <footer>
+        <div class="centered-container">
+          <div class="row">
+            <div class="col-xl-6 col-md-12 footer-col">
+              <h5>Gruppenarbeit mit:</h5>
+              <ul>
+                <li>Alwin Eramsus Litscher</li>
+                <li>Noé Lorin Bachofner </li>
+                <li>Mike Sandor Zaugg</li>
+              </ul>
+            </div>
+            <div class="col-xl-6 col-md-12 footer-col text-md-start text-xl-end">
+              <h5>Vectoren von <a href="https://www.vecteezy.com/free-vector" target="_blank">Vecteezy</a></h5>
+              <h5>Bilder von <a href="https://www.freepik.com/" target="_blank">Freepik</a></h5>
+              <h5>QR-Code von <a href="https://app.qr-code-generator.com/" target="_blank">QR-Code Generator</a></h5>
+              <h5>Karte von <a href="https://leafletjs.com/" target="_blank">Leaflet/OpenStreetMap</a></h5>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
