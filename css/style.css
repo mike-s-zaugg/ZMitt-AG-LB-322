@@ -10,6 +10,7 @@ body {
   font-family: 'Josefine Sans', sans-serif;
   background-color: var(--black);
   color: var(--green);
+  min-height: 100vh;
 }
 
 
@@ -459,4 +460,5 @@ footer {
 
 .footer-col {
   padding: 20px 0px;
+
 }
