@@ -10,7 +10,6 @@ body {
   font-family: 'Josefine Sans', sans-serif;
   background-color: var(--black);
   color: var(--green);
-  min-height: 100vh;
 }
 
 
@@ -460,5 +459,22 @@ footer {
 
 .footer-col {
   padding: 20px 0px;
+}
 
+.form button {
+
+  margin-bottom: 0px;
+  height: 40px;
+}
+.form input {
+  height: 40px;
+  border-radius: 30px;
+  padding: 0 10px;
+  background-color: var(--black);
+  border: 1px solid var(--pink);
+  color: var(--pink);
+}
+
+.form {
+  margin-top: 100px;
 }
