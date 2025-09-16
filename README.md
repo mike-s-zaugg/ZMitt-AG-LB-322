@@ -1,7 +1,10 @@
 # ZMitt-AG-LB-322
 
 Dieses Projekt entstand aus einer Projektarbeit aus dem Modul 322 von der BBBaden.  
-Mitwirkende des Prozesses: Alwin Erasmus Litscher und Noé Lorin Bachofner
+Mitwirkende des Prozesses:
+- [Noé Lorin Bachofner](https://github.com/noebachofner)
+- [Alwin Erasmus Litscher](https://github.com/TheXaruman)
+
 
 ## Hinweis
 Dieses Repository dient einzig und allein dem Zweck einer Live-Demo und zur Bereitstellung des Source-Codes.  
